@@ -2,7 +2,7 @@ package camelinaction;
 
 import org.apache.camel.builder.RouteBuilder;
 
-class MyRouteBuilder extends RouteBuilder {
+public class MyRouteBuilder extends RouteBuilder {
 
     private String uriTo;
     private String uriErrorReply;
@@ -26,5 +26,6 @@ class MyRouteBuilder extends RouteBuilder {
                 .log("Send error-reply")
                 .log("\n${headers}")
                 .to(uriErrorReply);
+
     }
 }
